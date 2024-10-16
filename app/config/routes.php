@@ -10,4 +10,5 @@ return [
     '/login' => [UserController::class, 'login'],
     '/logout' => [UserController::class, 'logout'],
     '/profile' => [ProfileController::class, 'profile'],
+    '/profile/edit' => [ProfileController::class, 'editProfile']
 ];

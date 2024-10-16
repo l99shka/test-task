@@ -7,19 +7,24 @@
 </head>
 <body>
 <div class="profile">
+    <?php if (isset($_SESSION['user_id'])): ?>
         <a class="profile-icon" href="/profile">
             <img width="50" height="50" src="/icons/profile-icon-50x50.png" alt="profile-icon">
+            <?php echo $profileEmail; ?>
         </a>
+
         <a class="profile-exit" href="/logout">
             <img width="50" height="50" src="/icons/profile-icon-exit-50x50.png" alt="profile-exit">
             Выход
         </a>
+    <?php else: ?>
         <a class="login" href="/login">
             Вход
         </a>
         <a class="register" href="/signup">
             Регистрация
         </a>
+    <?php endif; ?>
 </div>
 
 <div class="home-page">

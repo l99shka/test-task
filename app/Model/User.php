@@ -88,6 +88,12 @@ class User
         $stmt->execute(['name' => $this->name, 'email' => $this->email, 'phone' => $this->phone, 'password' => $this->password]);
     }
 
+    public function update(int $id): void
+    {
+        $stmt = ConnectFactory::create()->prepare("UPDATE users SET name = :name, email = :email, phone = :phone, password = :password WHERE id = :id");
+        $stmt->execute(['name' => $this->name, 'email' => $this->email, 'phone' => $this->phone, 'password' => $this->password, 'id' => $id]);
+    }
+
     private function setId(int $id): void
     {
         $this->id = $id;

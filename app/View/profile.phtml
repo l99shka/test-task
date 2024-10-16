@@ -14,11 +14,35 @@
 <div class="profile">
     <form action="/profile/edit" method="POST">
         <label for="name">Имя</label>
-        <input id="name" type="text" name="name" placeholder="Введите имя" value="">
+        <label for="name" style="color: #4b1010">
+            <?php
+            if (isset($errors['name'])) {
+                echo $errors['name'];
+            }
+            ?>
+        </label>
+        <input id="name" type="text" name="name" placeholder="Введите имя" value="<?php echo $user->getName() ?>">
+
         <label for="phone">Телефон</label>
-        <input id="phone" type="tel" name="phone" placeholder="Введите телефон" value="">
+        <label for="phone" style="color: #4b1010">
+            <?php
+            if (isset($errors['phone'])) {
+                echo $errors['phone'];
+            }
+            ?>
+        </label>
+        <input id="phone" type="tel" name="phone" placeholder="Введите телефон" value="<?php echo $user->getPhone() ?>">
+
         <label for="email">E-mail</label>
-        <input id="email" type="email" name="email" placeholder="Введите E-mail" value="">
+        <label for="email" style="color: #4b1010">
+            <?php
+            if (isset($errors['email'])) {
+                echo $errors['email'];
+            }
+            ?>
+        </label>
+        <input id="email" type="email" name="email" placeholder="Введите E-mail" value="<?php echo $user->getEmail() ?>">
+
         <label for="password">Пароль (Необязательно)</label>
         <input id="password" type="password" name="password" placeholder="Изменить пароль">
 
