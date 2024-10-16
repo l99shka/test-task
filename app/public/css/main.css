@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+.profile {
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+a {
+    color: #7c9ab7;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 106, 222, 0.34);
+    border: solid;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+a:hover {
+    background: #006ade;
+}
+
+img {
+    margin-right: 10px;
+}
+
+.home-page {
+    text-align: center;
+    margin-top: 300px;
+}

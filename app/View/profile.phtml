@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой профиль</title>
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+<div class="back">
+    <a href="/" type="button">
+        Вернуться назад
+    </a>
+</div>
+<div class="profile">
+    <form action="/profile/edit" method="POST">
+        <label for="name">Имя</label>
+        <input id="name" type="text" name="name" placeholder="Введите имя" value="">
+        <label for="phone">Телефон</label>
+        <input id="phone" type="tel" name="phone" placeholder="Введите телефон" value="">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" name="email" placeholder="Введите E-mail" value="">
+        <label for="password">Пароль (Необязательно)</label>
+        <input id="password" type="password" name="password" placeholder="Изменить пароль">
+
+        <button type="submit" class="register-btn">Изменить</button>
+    </form>
+</div>
+</body>
+</html>
