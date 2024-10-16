@@ -42,3 +42,8 @@ button {
     border: unset;
     cursor: pointer;
 }
+
+#captcha-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

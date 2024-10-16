@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Авторизация и регистрация</title>
     <link rel="stylesheet" href="/css/login.css">
+    <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
 </head>
 <body>
 
@@ -11,9 +12,27 @@
 
 <form action="" method="POST">
     <label>Логин</label>
+    <label style="color: #4b1010"><?php if (isset($errors['email-phone'])) {
+            echo $errors['email-phone'];
+        } ?></label>
     <input type="text" name="email-phone" placeholder="Введите свой E-mail или телефон">
     <label>Пароль</label>
+    <label style="color: #4b1010"><?php if (isset($errors['password'])) {
+            echo $errors['password'];
+        } ?></label>
     <input type="password" name="password" placeholder="Введите пароль">
+    <label style="color: #4b1010"><?php if (isset($errorsLoginPsw['errors'])) {
+            echo $errorsLoginPsw['errors'];
+        } ?></label>
+
+    <div
+            id="captcha-container"
+            class="smart-captcha"
+            data-sitekey="ysc1_MqmtcEovTOg5lhVvNO8EhXqBxGVXeRPNDs3dBmq9fc85e625"
+    ></div>
+    <label style="color: #4b1010"><?php if (isset($errors['captcha'])) {
+            echo $errors['captcha'];
+        } ?></label>
     <button type="submit" class="login-btn">Войти</button>
     <p>
         У вас нет аккаунта? - <a href="/signup">зарегистрируйтесь</a>!
