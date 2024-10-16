@@ -11,14 +11,52 @@
 
 <form action="" method="POST">
     <label for="name">Имя</label>
+    <label for="name" style="color: #4b1010">
+        <?php
+        if (isset($errors['name'])) {
+            echo $errors['name'];
+        }
+        ?>
+    </label>
     <input id="name" type="text" name="name" placeholder="Введите имя">
+
     <label for="phone">Телефон</label>
+    <label for="phone" style="color: #4b1010">
+        <?php
+        if (isset($errors['phone'])) {
+            echo $errors['phone'];
+        }
+        ?>
+    </label>
     <input id="phone" type="tel" name="phone" placeholder="Введите телефон">
+
     <label for="email">E-mail</label>
+    <label for="email" style="color: #4b1010">
+        <?php
+        if (isset($errors['email'])) {
+            echo $errors['email'];
+        }
+        ?>
+    </label>
     <input id="email" type="email" name="email" placeholder="Введите E-mail">
+
     <label for="password">Пароль</label>
+    <label for="password" style="color: #4b1010">
+        <?php if (isset($errors['password'])) {
+            echo $errors['password'];
+        }
+        ?>
+    </label>
     <input id="password" type="password" name="password" placeholder="Придумайте пароль">
+
     <label for="psw">Подтверждение пароля</label>
+    <label for="psw" style="color: #4b1010">
+        <?php
+        if (isset($errors['psw'])) {
+            echo $errors['psw'];
+        }
+        ?>
+    </label>
     <input id="psw" type="password" name="psw" placeholder="Повторите пароль">
 
     <button type="submit" class="register-btn">Зарегистрироваться</button>
